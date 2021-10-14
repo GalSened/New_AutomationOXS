@@ -1,0 +1,19 @@
+{
+  "name": "new_automationoxs",
+  "version": "1.0.0",
+  "description": "OXS_testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalSened/New_AutomationOXS.git"
+  },
+  "author": "GalSened",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalSened/New_AutomationOXS/issues"
+  },
+  "homepage": "https://github.com/GalSened/New_AutomationOXS#readme"
+}
