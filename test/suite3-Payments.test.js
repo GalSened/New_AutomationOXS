@@ -10,7 +10,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("Testing payments in cash and CC", function(){
+describe("Testing payments in cash, CC & checks", function(){
 
     before( () => {
         // do something before test suite execution

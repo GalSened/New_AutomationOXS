@@ -37,7 +37,7 @@ describe("testing company settings", function(){
 
     });
 
-    it("Test-1", () => {
+    it("changing the clearing commission", () => {
 
         // test Code
         // assertions

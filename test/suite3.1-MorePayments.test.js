@@ -12,7 +12,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("Inner Suite 1", function(){
+describe("testing payments in bank transfer & different payments", function(){
 
     before( () => {
         // do something before test suite execution
