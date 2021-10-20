@@ -12,8 +12,8 @@ var TEST_DATA =require ("./TestData.json");
 describe("testing company settings", function(){
 
     before( () => {
-        // do something before test suite execution
-        // no matter if there are failed cases
+        driver.get(TEST_DATA.url);
+        driver.manage().window().maximize();
 
     });
 

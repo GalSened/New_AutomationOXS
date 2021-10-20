@@ -15,14 +15,14 @@ var TEST_DATA =require ("./TestData.json");
 describe("testing payments in bank transfer & different payments", function(){
 
     before( () => {
-        // do something before test suite execution
-        // no matter if there are failed cases
+        driver.get(TEST_DATA.url);
+        driver.manage().window().maximize();
 
     });
 
     after( () => {
-        // do something after test suite execution is finished
-        // no matter if there are failed cases
+        driver.quit();
+
 
     });
 

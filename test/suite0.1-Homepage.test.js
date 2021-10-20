@@ -12,17 +12,17 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("changing the clearing commission", function(){
+describe("", function(){
 
     before( () => {
-        // do something before test suite execution
-        // no matter if there are failed cases
+        driver.get(TEST_DATA.url);
+        driver.manage().window().maximize();
 
     });
 
     after( () => {
-        // do something after test suite execution is finished
-        // no matter if there are failed cases
+        driver.quit();
+
 
     });
 

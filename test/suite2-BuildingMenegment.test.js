@@ -14,15 +14,15 @@ describe("Inner Suite 1",  () => {
 
     before( () => {
 
-        // do something before test suite execution
-        // no matter if there are failed cases
+        driver.get(TEST_DATA.url);
+        driver.manage().window().maximize();
 
     });
 
     after( () => {
 
-        // do something after test suite execution is finished
-        // no matter if there are failed cases
+        driver.quit();
+
 
     });
 
@@ -40,8 +40,9 @@ describe("Inner Suite 1",  () => {
 
     });
 
-    it("creating a building in company with 5 apartments", () => {
-        await driver.sleep(5000);
+    it("creating a building in company with 5 apartments",async () => {
+
+        driver.sleep(5000);
         let CompanyName = await driver.findElement(By.xpath('//*[@id="view"]/div/div[1]/div/div[2]/h2')).getText().then((value) => { return value });
         console.log(CompanyName);
         assert.strictEqual(CompanyName, 'בניינים ונהנים בע"מ');
@@ -72,7 +73,7 @@ describe("Inner Suite 1",  () => {
     });
 
 
-    it("Test-3", () => {
+    it("Test-3", async () => {
             await driver.findElement(By.xpath('//*[@id="view"]/div/div[2]/div/div[1]/div[4]/div[2]/div/p')).click();
             await driver.findElement(By.xpath('//*[@id="view"]/div/div[2]/div/div[1]/div[4]/div[2]/ul/li[3]/p')).click();
             await driver.sleep(4000);
@@ -108,9 +109,9 @@ describe("Inner Suite 1",  () => {
 
 
 
-    it("Edit apartment number from 100 to 200 + assertion + print new number", () => {
+    it("Edit apartment number from 100 to 200 + assertion + print new number",async () => {
 
-        await driver.sleep(10000);
+    driver.sleep(10000);
     await driver.findElement(By.xpath('//*[@id="view"]/div/div[2]/div/div[1]/div[2]/img')).click();
     await driver.findElement(By.xpath('//*[@id="610a6d8bf0691d26a2124ad1"]')).click();
     await driver.sleep(4000);
@@ -122,9 +123,9 @@ describe("Inner Suite 1",  () => {
     let EditAp = await driver.findElement(By.xpath('//*[@id="modalTitle"]/h2')).getText().then((value) => { return value });
     console.log(EditAp);
     assert.strictEqual(EditAp, 'עריכת דירה - 100');
-    let ApartmentNumbur = await driver.findElement(By.xpath('//*[@id="modalDescription"]/div[1]/div[2]/input'));
-    ApartmentNumbur.clear();
-    ApartmentNumbur.sendKeys('200');
+    let ApartmentNumber = await driver.findElement(By.xpath('//*[@id="modalDescription"]/div[1]/div[2]/input'));
+    ApartmentNumber.clear();
+    ApartmentNumber.sendKeys('200');
     await driver.findElement(By.xpath('//*[@id="modalDescription"]/div[5]/input')).click();
     await driver.sleep(4000);
     let ApartmentAlert = await driver.findElement(By.xpath('//*[@id="modalDescription"]/div/div[2]/span/span')).getText();

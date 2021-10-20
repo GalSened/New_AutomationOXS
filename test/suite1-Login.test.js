@@ -43,6 +43,8 @@ describe("login to main page", () => {
         await driver.findElement(By.xpath('//*[@id="login-form"]/form/input[1]')).sendKeys(TEST_DATA.username);
         await driver.findElement(By.xpath('//*[@id="login-form"]/form/input[2]')).sendKeys(TEST_DATA.password);
         await driver.findElement(By.xpath('//*[@id="login-submit"]/input')).click();
+        NameOfCompany= await driver.findElement(By.xpath('//*[@id="view"]/div/div[1]/div/div[2]/h2')).getText();
+        assert.equal(NameOfCompany, 'בניינים ונהנים בע"מ', 'name of company is wrong');
     
     }).timeout(10000);
 
