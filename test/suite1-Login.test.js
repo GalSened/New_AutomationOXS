@@ -11,18 +11,15 @@ var TEST_DATA =require ("./TestData.json");
 describe("login to main page", () => {
     
 
-    before( function(done){
-
+    before( () => {
         driver.get(TEST_DATA.url);
         driver.manage().window().maximize();
-    done();
+
     });
 
-    after(() => {
-
+    after( () => {
         driver.quit();
 
-        
     });
 
     beforeEach(() => {

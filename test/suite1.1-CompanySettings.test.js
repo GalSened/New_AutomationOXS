@@ -18,10 +18,11 @@ describe("testing company settings", function(){
     });
 
     after( () => {
-        // do something after test suite execution is finished
-        // no matter if there are failed cases
+        driver.quit();
 
     });
+
+
 
     beforeEach( () => {
 

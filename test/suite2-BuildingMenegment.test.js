@@ -10,19 +10,16 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("Inner Suite 1",  () => {
+describe("Creating and editing a building",  () => {
 
     before( () => {
-
         driver.get(TEST_DATA.url);
         driver.manage().window().maximize();
 
     });
 
     after( () => {
-
         driver.quit();
-
 
     });
 

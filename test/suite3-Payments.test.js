@@ -21,7 +21,6 @@ describe("Testing payments in cash, CC & checks", function(){
     after( () => {
         driver.quit();
 
-
     });
 
     beforeEach( () => {

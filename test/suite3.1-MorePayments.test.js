@@ -23,7 +23,6 @@ describe("testing payments in bank transfer & different payments", function(){
     after( () => {
         driver.quit();
 
-
     });
 
     beforeEach( () => {
