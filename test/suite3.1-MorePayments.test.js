@@ -12,7 +12,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("changing the clearing commission", function(){
+describe("Inner Suite 1", function(){
 
     before( () => {
         // do something before test suite execution

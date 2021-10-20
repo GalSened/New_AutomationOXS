@@ -8,7 +8,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("Inner Suite 1", () => {
+describe("login to main page", () => {
     
 
     before( function(done){
@@ -20,7 +20,7 @@ describe("Inner Suite 1", () => {
 
     after(() => {
 
-        //driver.quit();
+        driver.quit();
 
         
     });
