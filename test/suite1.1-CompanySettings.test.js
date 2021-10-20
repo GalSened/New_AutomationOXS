@@ -1,6 +1,5 @@
 
 
-
 const {Builder, By, Key, until} = require('selenium-webdriver');
 let driver = new Builder().forBrowser('chrome').build();
 var assert = require('chai').assert;
@@ -10,9 +9,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-
-
-describe("changing the clearing commission", function(){
+describe("testing company settings", function(){
 
     before( () => {
         // do something before test suite execution
