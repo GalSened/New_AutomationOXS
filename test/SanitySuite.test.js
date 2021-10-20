@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 const {Builder, By, Key, until} = require('selenium-webdriver');
 let driver = new Builder().forBrowser('chrome').build();
 var assert = require('chai').assert;
@@ -10,7 +16,7 @@ var TEST_DATA =require ("./TestData.json");
 
 
 
-describe("Testing payments in cash and CC", function(){
+describe("Inner Suite 1", function(){
 
     before( () => {
         // do something before test suite execution
