@@ -1,8 +1,14 @@
 {
     "url": "https://stg.oxs.co.il",
     "username": "user@test.com",
-    "password": "123123"
+    "password": "123123",
 
+
+    "city": "חולון",
+    "street": "ההסתדרות",
+    "streetNum": "200",
+    "VAAD": "150",
+    "ChangVAAD": "250"
 
 
 
