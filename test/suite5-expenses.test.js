@@ -16,29 +16,21 @@ var TEST_DATA =require ("./TestData.json");
 
 describe("Inner Suite 1", function(){
 
-    before( () => {
+    beforeEach( (done) => {
         driver.get(TEST_DATA.url);
         driver.manage().window().maximize();
 
+        driver.sleep(1000);      
+        driver.wait(until.elementLocated(By.xpath('//*[@id="view"]/div/div[2]/div/div[1]/div[2]/img')),10000).click();
+        driver.findElement(By.id('612b340e3be86169b2342b70')).click();
+
+        done();
     });
 
-    after( () => {
+    afterEach( (done) => {
         driver.quit();
 
-    });
-
-    beforeEach( () => {
-
-        // do something before test case execution
-        // no matter if there are failed cases
-
-    });
-
-    afterEach( () => {
-
-        // do something after test case execution is finished
-        // no matter if there are failed cases
-
+        done();
     });
 
     it("Test-1", () => {

@@ -14,29 +14,19 @@ var TEST_DATA =require ("./TestData.json");
 
 describe("", function(){
 
-    before( () => {
+    beforeEach( (done) => {
         driver.get(TEST_DATA.url);
         driver.manage().window().maximize();
 
+        
+
+        done();
     });
 
-    after( () => {
+    afterEach( (done) => {
         driver.quit();
 
-    });
-
-    beforeEach( () => {
-
-        // do something before test case execution
-        // no matter if there are failed cases
-
-    });
-
-    afterEach( () => {
-
-        // do something after test case execution is finished
-        // no matter if there are failed cases
-
+        done();
     });
 
     it("Test-1", () => {
