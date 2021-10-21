@@ -4,17 +4,17 @@ let driver = new Builder().forBrowser('chrome').build();
 var assert = require('chai').assert;
 var webdriver = require('selenium-webdriver');
 var TEST_DATA =require ("./TestData.json"); 
+var Data = require('../exportData.js')
 
 
 
-
-describe.only("login to main page", () => {
+describe("login to main page", () => {
     
 
     beforeEach( (done) => {
         driver.get(TEST_DATA.url);
         driver.manage().window().maximize();
-
+        console.log(Data.MyData); Data.MyData
     
 
         done();
